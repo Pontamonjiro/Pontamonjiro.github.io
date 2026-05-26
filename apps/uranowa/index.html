@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uranowa — 星が読み解く、毎日の運勢と相性</title>
+  <meta name="description" content="Uranowa（うらのわ）は、天体の動きに基づいた毎日の星占い・相性占いアプリです。12星座の運勢、気になる人との相性、ラッキー情報を毎日お届けします。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="top-bar">
+    <a href="index.html" class="logo">URANOWA</a>
+    <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+      <span class="lang-ja">EN</span>
+      <span class="lang-en" style="display:none">JA</span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-logo">URANOWA</div>
+
+    <p class="hero-tagline lang-ja">星が読み解く、毎日の運勢と相性</p>
+    <p class="hero-tagline lang-en" style="display:none">Daily horoscopes & compatibility, guided by the stars</p>
+
+    <p class="hero-sub lang-ja">天体の動きに基づいた本格星占いアプリ</p>
+    <p class="hero-sub lang-en" style="display:none">Astrology app powered by real planetary movements</p>
+
+    <a href="#" class="store-badge lang-ja">App Store で入手</a>
+    <a href="#" class="store-badge lang-en" style="display:none">Download on the App Store</a>
+  </div>
+
+  <!-- Features -->
+  <div class="features">
+    <div class="feature-card">
+      <span class="feature-icon">&#11088;</span>
+      <div class="feature-title lang-ja">毎日の星占い</div>
+      <div class="feature-title lang-en" style="display:none">Daily Horoscope</div>
+      <div class="feature-desc lang-ja">天体暦に基づいたリアルな星の配置から、12星座の運勢を毎日お届け。総合・恋愛・仕事・金運・健康の5項目で占います。</div>
+      <div class="feature-desc lang-en" style="display:none">Real planetary positions deliver daily fortunes for all 12 signs. Five categories: overall, love, work, money, and health.</div>
+    </div>
+
+    <div class="feature-card">
+      <span class="feature-icon">&#128150;</span>
+      <div class="feature-title lang-ja">相性占い</div>
+      <div class="feature-title lang-en" style="display:none">Compatibility</div>
+      <div class="feature-desc lang-ja">気になる人を登録して、毎日変わる2人の相性をチェック。全78ペアのランキングも見られます。</div>
+      <div class="feature-desc lang-en" style="display:none">Register people you care about and check daily compatibility. View rankings for all 78 zodiac pairs.</div>
+    </div>
+
+    <div class="feature-card">
+      <span class="feature-icon">&#128172;</span>
+      <div class="feature-title lang-ja">行動サジェスト</div>
+      <div class="feature-title lang-en" style="display:none">Action Suggestions</div>
+      <div class="feature-desc lang-ja">今日の運勢と相性に基づいて、登録した人との過ごし方をやさしくアドバイス。関係性に合わせた提案をお届けします。</div>
+      <div class="feature-desc lang-en" style="display:none">Get gentle advice on how to interact with your registered people, based on today's fortune and compatibility.</div>
+    </div>
+
+    <div class="feature-card">
+      <span class="feature-icon">&#127808;</span>
+      <div class="feature-title lang-ja">ラッキー情報</div>
+      <div class="feature-title lang-en" style="display:none">Lucky Info</div>
+      <div class="feature-desc lang-ja">ラッキーカラー・ラッキーナンバー・ラッキースポットを毎日お届け。天体の配置から算出した、あなただけの開運ヒント。</div>
+      <div class="feature-desc lang-en" style="display:none">Daily lucky color, number, and spot calculated from planetary positions. Your personal fortune boosters.</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html" class="lang-ja">プライバシーポリシー</a>
+      <a href="privacy.html" class="lang-en" style="display:none">Privacy Policy</a>
+      <span class="sep">|</span>
+      <a href="terms.html" class="lang-ja">利用規約</a>
+      <a href="terms.html" class="lang-en" style="display:none">Terms of Use</a>
+    </div>
+    <p class="copyright">&copy; 2026 Uranowa</p>
+  </footer>
+
+  <script>
+    function toggleLang() {
+      document.querySelectorAll('.lang-ja').forEach(el => {
+        el.style.display = el.style.display === 'none' ? '' : 'none';
+      });
+      document.querySelectorAll('.lang-en').forEach(el => {
+        el.style.display = el.style.display === 'none' ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
