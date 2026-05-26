@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apps — Pontamonjiro</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #1a0e2e;
+      --bg-card: rgba(255,255,255,0.06);
+      --text: #f0eaf8;
+      --text-secondary: #c4b8d9;
+      --text-muted: #8a7da0;
+      --accent-water: #4ecdc4;
+      --accent-gold: #f0c674;
+      --border: rgba(78,205,196,0.15);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 50% 10%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 15% 85%, rgba(240,198,116,0.4) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 85% 15%, rgba(78,205,196,0.4) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+      animation: twinkle 8s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle { 0% { opacity: 0.6; } 100% { opacity: 1; } }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 80px 24px 60px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 48px;
+    }
+    .app-list {
+      display: grid;
+      gap: 20px;
+    }
+    .app-card {
+      display: block;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-decoration: none;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .app-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-water);
+    }
+    .app-name {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      background: linear-gradient(135deg, var(--accent-water), var(--accent-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+    .app-desc {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+    }
+    .copyright {
+      font-size: 11px;
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Apps</h1>
+    <p class="subtitle">Pontamonjiro</p>
+
+    <div class="app-list">
+      <a href="uranowa/" class="app-card">
+        <div class="app-name">URANOWA</div>
+        <div class="app-desc">星が読み解く、毎日の運勢と相性</div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p class="copyright">&copy; 2026 Pontamonjiro</p>
+  </footer>
+</body>
+</html>
