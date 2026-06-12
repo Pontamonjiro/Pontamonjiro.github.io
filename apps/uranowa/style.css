@@ -9,14 +9,15 @@
 
 :root {
   --bg: #1a0e2e;
-  --bg-card: rgba(255,255,255,0.06);
+  --bg-card: rgba(30,18,60,0.55);
   --text: #f0eaf8;
   --text-secondary: #c4b8d9;
-  --text-muted: #8a7da0;
+  --text-muted: #9f94b8;
   --accent-water: #4ecdc4;
   --accent-gold: #f0c674;
   --accent-leaf: #6ab08b;
-  --border: rgba(78,205,196,0.15);
+  --border: rgba(155,120,220,0.25);
+  --gradient: linear-gradient(135deg, #79E7E0, #B29BFF, #F5D17A);
   --radius: 16px;
 }
 
@@ -46,6 +47,7 @@ body::before {
     radial-gradient(1px 1px at 90% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
     radial-gradient(1.5px 1.5px at 15% 85%, rgba(240,198,116,0.4) 0%, transparent 100%),
     radial-gradient(1.5px 1.5px at 85% 15%, rgba(78,205,196,0.4) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 50% 50%, rgba(178,155,255,0.35) 0%, transparent 100%),
     radial-gradient(1px 1px at 25% 45%, rgba(255,255,255,0.3) 0%, transparent 100%),
     radial-gradient(1px 1px at 65% 35%, rgba(255,255,255,0.4) 0%, transparent 100%),
     radial-gradient(1px 1px at 45% 75%, rgba(255,255,255,0.3) 0%, transparent 100%);
@@ -78,7 +80,7 @@ body::before {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 3px;
-  background: linear-gradient(135deg, var(--accent-water), var(--accent-gold));
+  background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -113,7 +115,7 @@ body::before {
   font-size: 48px;
   font-weight: 700;
   letter-spacing: 8px;
-  background: linear-gradient(135deg, var(--accent-water), var(--accent-gold));
+  background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -143,12 +145,12 @@ body::before {
   font-weight: 700;
   font-size: 15px;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 20px rgba(78,205,196,0.3);
+  box-shadow: 0 4px 20px rgba(78,205,196,0.25), 0 2px 12px rgba(178,155,255,0.15);
 }
 
 .store-badge:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(78,205,196,0.4);
+  box-shadow: 0 6px 28px rgba(78,205,196,0.35), 0 4px 16px rgba(178,155,255,0.2);
 }
 
 /* ===== Features ===== */
@@ -210,7 +212,7 @@ body::before {
   font-weight: 700;
   text-align: center;
   margin-bottom: 8px;
-  background: linear-gradient(135deg, var(--accent-water), var(--accent-gold));
+  background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
