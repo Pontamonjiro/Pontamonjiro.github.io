@@ -113,6 +113,33 @@
         el.style.display = el.style.display === 'none' ? '' : 'none';
       });
     }
+
+    // ===== ① GA4 流入計測 =====
+    // 測定ID（G-XXXXXXXXXX）を入れると有効化。空の間は何も読み込まない（無効）。
+    var GA_MEASUREMENT_ID = 'G-33G0KM74K1';
+    if (GA_MEASUREMENT_ID) {
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+      document.head.appendChild(gaScript);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', GA_MEASUREMENT_ID);
+    }
+
+    // ===== ② App Store キャンペーン計測 =====
+    // 流入元パラメータ（?c= / ?ct= / ?from=）を App Store リンクの ?ct= に付与。
+    // → App Store Connect の App Analytics で campaign 別インストールが見える。
+    // 命名ルールは docs/attribution.md を参照（例: share_qr / tiktok_v001 / lp_hero）。
+    (function () {
+      var p = new URLSearchParams(location.search);
+      var campaign = p.get('c') || p.get('ct') || p.get('from') || 'lp_direct';
+      document.querySelectorAll('.store-badge').forEach(function (a) {
+        var base = (a.getAttribute('href') || '').split('?')[0];
+        a.setAttribute('href', base + '?ct=' + encodeURIComponent(campaign));
+      });
+    })();
   </script>
 </body>
 </html>
