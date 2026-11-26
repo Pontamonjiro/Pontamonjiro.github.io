@@ -28,7 +28,7 @@
           </section>
 
           <section>
-            <h2>収集する情報</h2>
+            <h2>本アプリが取り扱う情報</h2>
             <div class="section-body">
               <p>本アプリでは以下の情報をご入力いただきます。</p>
               <p></p>
@@ -47,7 +47,7 @@
               <p></p>
               <p>これらの情報はすべてお使いの端末内（AsyncStorage）にのみ保存され、アカウント登録は不要です。サーバーへの送信やクラウドへの同期は行わないため、開発者がこれらの情報を見ることはできません。</p>
               <p></p>
-              <p>登録した方の情報は、ご本人ではなくあなたが入力するものです。ご本人の同意を得たうえでご登録ください。本名ではなく呼び名でのご登録をおすすめします。</p>
+              <p>登録した方の情報は、ご本人ではなくあなたが入力するものです。呼び名（ニックネーム）でご登録ください。フルネーム・電話番号・メールアドレス・住所など、その方ご本人を特定できる情報は入力しないでください。</p>
             </div>
           </section>
 
@@ -66,9 +66,11 @@
           <section>
             <h2>データの保存場所</h2>
             <div class="section-body">
-              <p>ユーザーが入力した情報（あなたについて／登録した方について）は、すべてお使いの端末のローカルストレージ（AsyncStorage）に保存されます。クラウドへのバックアップや同期は行いません。アプリを削除すると、これらのデータは端末から完全に削除されます。</p>
+              <p>ユーザーが入力した情報（あなたについて／登録した方について）は、すべてお使いの端末のローカルストレージ（AsyncStorage）に保存されます。本アプリがこれらをサーバーやクラウドへ送信・同期することはありません。</p>
               <p></p>
-              <p>1日1回のお知らせ（通知）は、端末内だけで予約・表示されます。通知のためにお客様の情報を外部へ送信することはありません。</p>
+              <p>ただし、お使いの端末の設定により、これらのデータが iCloud バックアップやパソコンへのバックアップに含まれることがあります。これは iOS の機能によるもので、本アプリが行うものではありません。アプリを削除すると端末内のデータは削除されますが、すでに作成されたバックアップからは削除されません。バックアップの管理は、端末の「設定」から行えます。</p>
+              <p></p>
+              <p>お知らせ（通知）は、端末内だけで予約・表示されます。村の出来事をお知らせする通知には、登録した方の呼び名が表示されることがあります（端末内で生成され、外部へ送信されることはありません）。ロック画面に表示したくない場合は、iOS の「設定」&gt;「通知」&gt;「プレビューを表示」からご変更いただけます。</p>
               <p></p>
               <p>なお、分析サービス（PostHog）へすでに送信された匿名の利用統計は、アプリを削除しても分析サービス側に残ります。削除をご希望の場合は、サポートページの連絡先までお知らせください。</p>
             </div>
@@ -115,7 +117,7 @@
           </section>
 
           <section>
-            <h2>Information We Collect</h2>
+            <h2>Information the App Handles</h2>
             <div class="section-body">
               <p>The App asks you to enter the following.</p>
               <p></p>
@@ -134,7 +136,7 @@
               <p></p>
               <p>All of this is stored only on your device (AsyncStorage). No account is required, and nothing is sent to a server or synced to the cloud, so the developer cannot see any of it.</p>
               <p></p>
-              <p>Information about the people you add is entered by you, not by them. Please add them only with their consent, and we recommend using a nickname rather than a real name.</p>
+              <p>Information about the people you add is entered by you, not by them. Please add them by a nickname. Do not enter information that identifies them, such as a full name, phone number, email address, or home address.</p>
             </div>
           </section>
 
@@ -153,9 +155,11 @@
           <section>
             <h2>Data Storage</h2>
             <div class="section-body">
-              <p>Everything you enter (about you, and about the people you add) is stored in local storage on your device (AsyncStorage). There is no cloud backup or sync. Deleting the app removes this data from your device completely.</p>
+              <p>Everything you enter (about you, and about the people you add) is stored in local storage on your device (AsyncStorage). The App never sends or syncs any of it to a server or to the cloud.</p>
               <p></p>
-              <p>The once-a-day notification is scheduled and shown entirely on your device. No information is sent anywhere in order to deliver it.</p>
+              <p>However, depending on your device settings, this data may be included in your iCloud or computer backups. That is a function of iOS, not of the App. Deleting the app removes the data from your device, but it is not removed from backups that have already been made. You can manage backups in your device Settings.</p>
+              <p></p>
+              <p>Notifications are scheduled and shown entirely on your device. A notification about something happening in the village may display the nickname of a person you added — it is generated on your device and never sent anywhere. If you would rather it did not appear on the lock screen, you can change this in iOS Settings &gt; Notifications &gt; Show Previews.</p>
               <p></p>
               <p>Note that anonymous usage statistics already sent to our analytics service (PostHog) remain with that service even after you delete the app. If you would like them removed, please contact us using the details on the support page.</p>
             </div>
